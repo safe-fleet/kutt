@@ -67,7 +67,7 @@ class MyApp extends App<any> {
       <>
         <Head>
           <title>
-            {publicRuntimeConfig.SITE_NAME} | Modern Open Source URL shortener.
+            Safe Fleet URL shortener
           </title>
         </Head>
         <StoreProvider store={this.store}>

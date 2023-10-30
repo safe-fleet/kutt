@@ -16,6 +16,8 @@ import Animation from "./Animation";
 import { Colors } from "../consts";
 import Icon from "./Icon";
 
+import LinksTable from "../components/LinksTable";
+
 const { publicRuntimeConfig } = getConfig();
 
 const SubmitIconWrapper = styled.div`
@@ -129,7 +131,7 @@ const Shortener = () => {
 
   const title = !link && (
     <H1 fontSize={[25, 27, 32]} light>
-      Kutt your links{" "}
+      Link{" "}
       <Span style={{ borderBottom: "2px dotted #999" }} light>
         shorter
       </Span>
