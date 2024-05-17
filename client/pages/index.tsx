@@ -23,14 +23,15 @@ const Homepage = () => {
     return null;
   }
 
+
   return (
     <AppWrapper>
       <Shortener />
-      {!isAuthenticated && <NeedToLogin />}
+      {/* {!isAuthenticated && <NeedToLogin />} */}
       {isAuthenticated && <LinksTable />}
-      <Features />
-      <Extensions />
-      <Footer />
+      {/* <Features /> */}
+      {/* <Extensions /> */}
+      {/* <Footer /> */}
     </AppWrapper>
   );
 };

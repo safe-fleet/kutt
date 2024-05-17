@@ -2,11 +2,13 @@ import getConfig from "next/config";
 
 const { publicRuntimeConfig } = getConfig();
 
-export const DISALLOW_ANONYMOUS_LINKS =
-  publicRuntimeConfig.DISALLOW_ANONYMOUS_LINKS === "true";
+export const DISALLOW_ANONYMOUS_LINKS = true;
+// export const DISALLOW_ANONYMOUS_LINKS =
+//   publicRuntimeConfig.DISALLOW_ANONYMOUS_LINKS === "true";
 
-export const DISALLOW_REGISTRATION =
-  publicRuntimeConfig.DISALLOW_REGISTRATION === "true";
+export const DISALLOW_REGISTRATION = true;
+// export const DISALLOW_REGISTRATION =
+//   publicRuntimeConfig.DISALLOW_REGISTRATION === "true";
 
 export enum APIv2 {
   AuthLogin = "/api/v2/auth/login",
