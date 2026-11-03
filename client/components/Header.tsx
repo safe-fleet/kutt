@@ -109,15 +109,15 @@ const Header: FC = () => {
           >
             <Image
               src="/images/logo.svg"
-              alt="kutt logo"
-              width={18}
-              height={24}
+              alt="safe fleet logo"
+              width={250}
+              height={100}
             />
-            {publicRuntimeConfig.SITE_NAME}
+            {/* {publicRuntimeConfig.SITE_NAME} */}
           </ALink>
         </LogoImage>
 
-        {!isMobile && (
+        {/* {!isMobile && (
           <Flex
             style={{ listStyle: "none" }}
             display={["none", "flex"]}
@@ -150,7 +150,7 @@ const Header: FC = () => {
               </ALink>
             </Li>
           </Flex>
-        )}
+        )} */}
       </Flex>
       <RowCenterV
         m={0}
@@ -159,7 +159,7 @@ const Header: FC = () => {
         as="ul"
         style={{ listStyle: "none" }}
       >
-        {isMobile && (
+        {/* {isMobile && (
           <Li>
             <Flex>
               <ALink
@@ -172,7 +172,7 @@ const Header: FC = () => {
               </ALink>
             </Flex>
           </Li>
-        )}
+        )} */}
         {logout}
         {settings}
         {login}

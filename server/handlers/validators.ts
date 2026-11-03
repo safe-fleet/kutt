@@ -112,21 +112,15 @@ export const createLink = [
     .withMessage("Domain should be string.")
     .customSanitizer(value => value.toLowerCase())
     .customSanitizer(value => removeWww(URL.parse(value).hostname || value))
-    .custom(async (address, { req }) => {
-      if (address === env.DEFAULT_DOMAIN) {
-        req.body.domain = null;
-        return;
+    .customSanitizer(value => {
+      if (value === env.DEFAULT_DOMAIN) {
+        return null;
       }
-
-      const domain = await query.domain.find({
-        address,
-        user_id: req.user.id
+      const domain = query.domain.find({
+        address: value
       });
-      req.body.domain = domain || null;
-
-      if (!domain) return Promise.reject();
+      return domain || null;
     })
-    .withMessage("You can't use this domain.")
 ];
 
 export const editLink = [
